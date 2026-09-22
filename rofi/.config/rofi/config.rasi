@@ -1,0 +1,45 @@
+configuration {
+    modi: "drun,run,window";
+    show-icons: true;
+    icon-theme: "Papirus";
+    display-drun: "Apps";
+    matching: "fuzzy";
+}
+
+@theme "/dev/null"
+@import "~/.config/rofi/colors.rasi"
+
+* {
+    font: "JetBrainsMono Nerd Font 12";
+    background-color: transparent;
+    text-color: @on-surface;
+}
+
+window {
+    width: 600px;
+    padding: 12px;
+    border: 2px;
+    border-color: @primary;
+    border-radius: 14px;
+    background-color: @surface;
+}
+
+mainbox { spacing: 10px; children: [ inputbar, listview ]; }
+
+inputbar {
+    padding: 10px 14px;
+    spacing: 10px;
+    border-radius: 10px;
+    background-color: @surface-container;
+    children: [ prompt, entry ];
+}
+
+prompt { text-color: @primary; }
+entry { placeholder: "Search..."; placeholder-color: @on-surface-var; }
+
+listview { lines: 8; spacing: 4px; scrollbar: false; }
+
+element { padding: 8px 12px; spacing: 10px; border-radius: 10px; }
+element selected.normal { background-color: @primary; text-color: @on-primary; }
+element-icon { size: 24px; }
+element-text { text-color: inherit; }
