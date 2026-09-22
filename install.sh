@@ -120,7 +120,7 @@ phase_desktop() {
 
   local wall
   wall=$(find ~/Pictures/wallpapers -maxdepth 1 -type f \
-         \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) | head -1)
+         \( -iname '*.jpg' -o -iname '*.jpeg' -o -iname '*.png' -o -iname '*.webp' \) -print -quit)
   if [[ -n "$wall" ]]; then
     matugen image "$wall" -m "$mode" --source-color-index 0 \
       || warn "Matugen reported errors (hooks fail outside a Hyprland session; that's fine)"
