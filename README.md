@@ -18,7 +18,7 @@ script detects NVIDIA and skips hardware-specific parts on other machines.
 | `xdg-desktop-portal/` | Portal backend preferences |
 | `bin/` | Scripts in `~/.local/bin` (wallpaper, theme mode, power menu, ...) |
 | `packages/` | Package lists: official repos, NVIDIA, AUR |
-| `system/` | Files copied into `/etc` (udev, modprobe, SDDM, zram) |
+| `system/` | Files copied into `/etc` (udev, modprobe, greetd, PAM, zram) |
 
 Everything except `packages/` and `system/` is a GNU Stow package, symlinked
 into `$HOME`. Files Matugen generates are git-ignored and recreated on install.

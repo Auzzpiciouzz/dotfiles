@@ -15,8 +15,8 @@ ttf-jetbrains-mono-nerd otf-font-awesome woff2-font-awesome
 # Screenshots and clipboard
 grim slurp satty wl-clipboard cliphist wl-clip-persist
 
-# Login and keyring (SDDM's greeter runs on X11, hence xorg-server)
-sddm xorg-server qt6-virtualkeyboard gnome-keyring seahorse
+# Login and keyring (greetd auto-login; hyprlock is the login screen)
+greetd greetd-tuigreet gnome-keyring seahorse
 
 # Audio and media
 pipewire pipewire-alsa pipewire-jack pipewire-pulse wireplumber

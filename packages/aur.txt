@@ -1,2 +1,2 @@
 # AUR packages, installed with paru
-sddm-astronaut-theme nitch peaclock tray-tui
+nitch peaclock tray-tui

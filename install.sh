@@ -85,19 +85,15 @@ phase_system() {
     ok "$dst"
   done < <(find "$DOTS/system" -type f -print0)
 
-  local meta=/usr/share/sddm/themes/sddm-astronaut-theme/metadata.desktop
-  if [[ -f "$meta" ]]; then
-    sudo sed -i 's|^ConfigFile=.*|ConfigFile=Themes/pixel_sakura.conf|' "$meta"
-    ok "SDDM theme set to pixel_sakura"
-  fi
   sudo udevadm control --reload
 }
 
 phase_services() {
   info "Enabling services"
-  local svcs=(NetworkManager bluetooth cups power-profiles-daemon sddm)
+  local svcs=(NetworkManager bluetooth cups power-profiles-daemon)
   $HAS_NVIDIA && svcs+=(nvidia-suspend nvidia-resume)
   sudo systemctl enable "${svcs[@]}"
+  sudo systemctl enable -f greetd   # auto-login + hyprlock; -f replaces any other display manager
 
   if [[ -f /etc/snapper/configs/root ]]; then
     sudo systemctl enable snapper-timeline.timer snapper-cleanup.timer
