@@ -15,3 +15,5 @@ PS1='[\u@\h \W]\$ '
 # Starship prompt (must be last)
 eval "$(starship init bash)"
 export EDITOR=nvim
+export PATH="$HOME/.local/bin:$PATH"
+alias htbvpn='sudo openvpn ~/htb/academy-regular.ovpn'
