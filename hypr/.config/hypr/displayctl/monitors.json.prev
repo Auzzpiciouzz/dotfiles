@@ -1,16 +1,20 @@
 {
   "version": 1,
-  "kept_at": "2026-09-28T13:50:11",
+  "kept_at": "2026-09-28T14:23:03",
   "states": {
     "eDP-1": {
       "name": "eDP-1",
       "make": "BOE",
       "model": "0x0AAE",
       "serial": "",
-      "enabled": false,
-      "mode": null,
+      "enabled": true,
+      "mode": {
+        "width": 1920,
+        "height": 1080,
+        "refresh_mhz": 144005
+      },
       "position": [
-        0,
+        2560,
         0
       ],
       "transform": 0,
@@ -44,7 +48,5 @@
   "kept_with": [
     "Samsung Electric Company LS27FG53x H9DL300352"
   ],
-  "guarded_panels": [
-    "eDP-1"
-  ]
+  "guarded_panels": []
 }
