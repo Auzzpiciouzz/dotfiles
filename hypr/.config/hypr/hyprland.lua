@@ -398,7 +398,7 @@ hl.layer_rule({ match = { namespace = "rofi" },   blur = true, ignore_alpha = 0.
 
 -- Toggle maximize (keeps bar and gaps visible)
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))
-pcall(dofile, "/home/auzz/.config/hypr/displayctl/monitors.lua")
+local dc_ok, dc_err = pcall(dofile, "/home/auzz/.config/hypr/displayctl/monitors.lua"); if not dc_ok then local f = io.open((os.getenv("XDG_RUNTIME_DIR") or "/tmp") .. "/displayctl-monitors.log", "a"); if f then f:write(os.date("%H:%M:%S") .. " ERROR loading monitors.lua: " .. tostring(dc_err) .. "\n"); f:close() end end
 
 -- Let a crashed hyprlock be restarted from a TTY instead of killing the session
 hl.config({ misc = { allow_session_lock_restore = true } })
