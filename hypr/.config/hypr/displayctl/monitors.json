@@ -1,22 +1,7 @@
 {
   "version": 1,
-  "kept_at": "2026-09-28T14:24:54",
+  "kept_at": "2026-09-28T14:43:49",
   "states": {
-    "eDP-1": {
-      "name": "eDP-1",
-      "make": "BOE",
-      "model": "0x0AAE",
-      "serial": "",
-      "enabled": false,
-      "mode": null,
-      "position": [
-        0,
-        0
-      ],
-      "transform": 0,
-      "scale": 1.0,
-      "adaptive_sync": 0
-    },
     "DP-3": {
       "name": "DP-3",
       "make": "Samsung Electric Company",
@@ -35,11 +20,26 @@
       "transform": 0,
       "scale": 1.0,
       "adaptive_sync": 0
+    },
+    "eDP-1": {
+      "name": "eDP-1",
+      "make": "BOE",
+      "model": "0x0AAE",
+      "serial": "",
+      "enabled": false,
+      "mode": null,
+      "position": [
+        0,
+        0
+      ],
+      "transform": 0,
+      "scale": 1.0,
+      "adaptive_sync": 0
     }
   },
   "descriptions": {
-    "eDP-1": "BOE 0x0AAE",
-    "DP-3": "Samsung Electric Company LS27FG53x H9DL300352"
+    "DP-3": "Samsung Electric Company LS27FG53x H9DL300352",
+    "eDP-1": "BOE 0x0AAE"
   },
   "kept_with": [
     "Samsung Electric Company LS27FG53x H9DL300352"
