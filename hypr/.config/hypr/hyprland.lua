@@ -62,6 +62,7 @@ end
 --   hl.exec_cmd("waybar & hyprpaper & firefox")
 -- end)
 hl.on("hyprland.start", function()
+   hl.exec_cmd("/home/auzz/.local/bin/autolock.sh")
    hl.exec_cmd("swaync")
    hl.exec_cmd("hypridle")
    hl.exec_cmd("swayosd-server")
