@@ -356,7 +356,6 @@
       "critical": 15
     },
     "on-click": "kitty --class power_menu --hold -e ~/.config/waybar/scripts/power-menu.sh",
-    "on-click-right": "~/.config/waybar/scripts/toggle_hypridle.sh",
     "format": "{icon} {capacity}%",
     "format-charging": "󰂄 {capacity}%",
     "format-plugged": "󰚥 {capacity}%",
