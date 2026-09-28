@@ -1,0 +1,13 @@
+[terminal]
+vt = 1
+
+# Runs ONCE per boot: logs auzz straight into Hyprland.
+# HYPR_AUTOLOCK tells Hyprland to lock immediately with hyprlock.
+[initial_session]
+command = "env HYPR_AUTOLOCK=1 start-hyprland"
+user = "auzz"
+
+# Shown after a logout: text login that launches Hyprland.
+[default_session]
+command = "tuigreet --time --remember --remember-session --asterisks --cmd start-hyprland"
+user = "greeter"
