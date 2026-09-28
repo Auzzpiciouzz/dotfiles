@@ -402,3 +402,7 @@ pcall(dofile, "/home/auzz/.config/hypr/displayctl/monitors.lua")
 
 -- Let a crashed hyprlock be restarted from a TTY instead of killing the session
 hl.config({ misc = { allow_session_lock_restore = true } })
+
+-- Wallpaper: step through ~/Pictures/wallpapers (recolours via wallpaper.sh)
+hl.bind("SUPER + ALT + right", hl.dsp.exec_cmd("/home/auzz/.local/bin/wallpaper-cycle.sh next"))
+hl.bind("SUPER + ALT + left",  hl.dsp.exec_cmd("/home/auzz/.local/bin/wallpaper-cycle.sh prev"))

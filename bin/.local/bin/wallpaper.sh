@@ -34,6 +34,7 @@ else
 fi
 
 awww img "$WALL" --transition-type grow --transition-fps 60
+echo "$WALL" > "$HOME/.cache/wallpaper-current"
 MODE=$(cat "$HOME/.cache/theme-mode" 2>/dev/null || echo dark)
 matugen image "$WALL" -m "$MODE" --source-color-index 0 > /tmp/matugen.log 2>&1 \
   || notify-send -u critical "Matugen failed" "$(tail -3 /tmp/matugen.log)"
